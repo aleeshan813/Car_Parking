@@ -29,12 +29,29 @@ public class WinMenu : MonoBehaviour
     }
     public void NextLevel(int level)
     {
+        Debug.Log("nextlevel");
+        UnlockNewLevel(level);
         string levelName = "level-" + level;
         SceneManager.LoadScene("Level-" + level.ToString());
     }
+
     public void Menu()
     {
         SceneManager.LoadScene(0);
     }
+
+    void UnlockNewLevel(int level)
+    {
+        Debug.Log("unlocked");
+        int nextLevelIndex = level + 1;
+
+        if (nextLevelIndex > PlayerPrefs.GetInt("ReachedIndex"))
+        {
+            PlayerPrefs.SetInt("ReachedIndex", nextLevelIndex);
+            PlayerPrefs.SetInt("UnlockedLevel", nextLevelIndex);
+            PlayerPrefs.Save();
+        }
+    }
+
 }
 

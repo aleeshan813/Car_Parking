@@ -17171,6 +17171,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8527555960260261276, guid: fa9f2bd69e148cc48bfdf71e8991ae36, type: 3}
+      propertyPath: parkingAreaColor
+      value: 
+      objectReference: {fileID: 2100000, guid: 30ab0636bcc00be44ab11644c5c6946e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa9f2bd69e148cc48bfdf71e8991ae36, type: 3}
 --- !u!1001 &4122685156057865096
@@ -17630,7 +17634,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: WinMenu
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5101451074036905087, guid: 54c7a9b5414f94b4183efaacc21c902d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 54c7a9b5414f94b4183efaacc21c902d, type: 3}
 --- !u!114 &6062533553768841385 stripped
 MonoBehaviour:
@@ -17730,7 +17735,8 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8280987742415818379, guid: 8e949bb2ae963b044b63a6e0494c9e9f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8e949bb2ae963b044b63a6e0494c9e9f, type: 3}
 --- !u!114 &8280987742978286599 stripped
 MonoBehaviour:

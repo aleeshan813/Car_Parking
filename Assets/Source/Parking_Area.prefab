@@ -203,6 +203,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 132328909258943975}
+  - component: {fileID: 8527555960260261276}
   m_Layer: 0
   m_Name: Parking_Area
   m_TagString: Untagged
@@ -229,6 +230,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8527555960260261276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132328909258943974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3374c770dea769447972459598d7d1db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parkingAreaColor: {fileID: 2100000, guid: 30ab0636bcc00be44ab11644c5c6946e, type: 2}
 --- !u!1 &132328910025648872
 GameObject:
   m_ObjectHideFlags: 0
@@ -341,6 +355,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parkArea: {fileID: 0}
   greenColor: {r: 0, g: 1, b: 0, a: 1}
+  WinPanel: {fileID: 0}
 --- !u!1 &132328910113881851
 GameObject:
   m_ObjectHideFlags: 0
