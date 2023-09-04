@@ -29,7 +29,6 @@ public class WinMenu : MonoBehaviour
     }
     public void NextLevel(int level)
     {
-        Debug.Log("nextlevel");
         UnlockNewLevel(level);
         string levelName = "level-" + level;
         SceneManager.LoadScene("Level-" + level.ToString());
@@ -42,7 +41,6 @@ public class WinMenu : MonoBehaviour
 
     void UnlockNewLevel(int level)
     {
-        Debug.Log("unlocked");
         int nextLevelIndex = level + 1;
 
         if (nextLevelIndex > PlayerPrefs.GetInt("ReachedIndex"))

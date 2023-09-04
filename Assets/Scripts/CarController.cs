@@ -12,6 +12,10 @@ public class CarController : MonoBehaviour
     public WheelColliders colliders;
     public WheelMesh wheelmeshs;
     public WheelParticles wheelparticles;
+    [SerializeField] GameObject[] BrakeLight;
+    [SerializeField] Material BrakeMaterial;
+    [SerializeField] Material Brake_off;
+
 
     [SerializeField] float gasInput;
     [SerializeField] float steeringInupt;
@@ -23,7 +27,7 @@ public class CarController : MonoBehaviour
 
     [SerializeField] AudioSource MotorSound;
     [SerializeField] AudioSource BrakeSound;
-
+    [SerializeField] AudioSource CarHorn;
 
     float Speed;
 
@@ -101,15 +105,39 @@ public class CarController : MonoBehaviour
             brakeInput = 0;
             isBraked = false;
         }
+
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            PlayCarHorn();
+        }
     }
 
-    void ApplyBrake()
+   void ApplyBrake()
+{
+    colliders.FRWheel.brakeTorque = brakeInput * brakePower * 0.7f;
+    colliders.FLWheel.brakeTorque = brakeInput * brakePower * 0.7f;
+    colliders.RRWheel.brakeTorque = brakeInput * brakePower * 0.3f;
+    colliders.RLWheel.brakeTorque = brakeInput * brakePower * 0.3f;
+
+    foreach (GameObject brakeLight in BrakeLight)
     {
-        colliders.FRWheel.brakeTorque = brakeInput * brakePower * 0.7f;
-        colliders.FLWheel.brakeTorque = brakeInput * brakePower * 0.7f;
-        colliders.RRWheel.brakeTorque = brakeInput * brakePower * 0.3f;
-        colliders.RLWheel.brakeTorque = brakeInput * brakePower * 0.3f;
+        // Get the Renderer component of each BrakeLight GameObject
+        Renderer brakeLightRenderer = brakeLight.GetComponent<Renderer>();
+
+        if (brakeInput > 0)
+        {
+            // Apply the BrakeMaterial when brakes are applied
+            brakeLightRenderer.material = BrakeMaterial;
+        }
+        else
+        {
+            // Apply the Brake_off material when brakes are released
+            brakeLightRenderer.material = Brake_off;
+        }
     }
+}
+
+
 
     //The turning of the Front Wheels
 
@@ -181,6 +209,11 @@ public class CarController : MonoBehaviour
             MotorSound.Play();
             BrakeSound.Stop();
         }
+    }
+
+    void PlayCarHorn()
+    {
+        CarHorn.Play();
     }
 }
 

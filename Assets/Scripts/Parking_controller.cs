@@ -12,6 +12,7 @@ public class Parking_controller : MonoBehaviour
     [SerializeField] private Color greenColor = Color.green; // Assign the green in the Inspector
 
     [SerializeField] GameObject WinPanel;
+    [SerializeField] GameObject Timer;
   
     // This function is called when the player enters any trigger collider attached to this object
     private void OnTriggerEnter(Collider other)
@@ -48,6 +49,7 @@ public class Parking_controller : MonoBehaviour
 
     private void GameWinUI()
     {
+        Destroy(Timer);
         WinPanel.SetActive(true);
     }
 }
