@@ -5,7 +5,7 @@ public class Timer_ : MonoBehaviour
 {
 
     [SerializeField] TextMeshProUGUI timerText;
-    [SerializeField] float ReminingTime;
+    public float ReminingTime;
     [SerializeField] GameObject ExitPanel;
     [SerializeField] GameObject Gear_Controller;
     [SerializeField]CarController carController;
@@ -25,4 +25,5 @@ public class Timer_ : MonoBehaviour
         int seconds = Mathf.FloorToInt(ReminingTime % 60);
         timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
+
 }

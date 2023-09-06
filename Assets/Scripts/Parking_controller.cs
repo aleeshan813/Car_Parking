@@ -1,20 +1,21 @@
-using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Parking_controller : MonoBehaviour
 {
     private HashSet<GameObject> enteredTriggers = new HashSet<GameObject>();
-
     private bool allTriggersEntered = false;
     public Material parkArea;
 
-    [SerializeField] private Color greenColor = Color.green; // Assign the green in the Inspector
+    public int score = 0;
 
+    [SerializeField] private Color greenColor = Color.green; // Assign the green in the Inspector
     [SerializeField] GameObject WinPanel;
     [SerializeField] GameObject Timer;
-  
-    // This function is called when the player enters any trigger collider attached to this object
+    [SerializeField] Timer_ timer;
+    [SerializeField] WinMenu menu;
+
     private void OnTriggerEnter(Collider other)
     {
         enteredTriggers.Add(other.gameObject);
@@ -28,6 +29,7 @@ public class Parking_controller : MonoBehaviour
             GameWinUI();
         }
     }
+
     private void OnTriggerExit(Collider other)
     {
         // Remove the exited collider from the HashSet
@@ -44,12 +46,30 @@ public class Parking_controller : MonoBehaviour
 
     private void ChangeTriggersColor(Color newColor)
     {
-        parkArea.color = newColor;      
+        parkArea.color = newColor;
     }
 
     private void GameWinUI()
     {
-        Destroy(Timer);
+        float remainingTime = timer.ReminingTime;
+
+        // Calculate the score based on the remaining time
+        
+        if (remainingTime >= 150) // 2.5 minutes
+        {
+            score = 100;
+        }   
+        else if (remainingTime >= 180) // 3 minutes
+        {
+            score = 50;
+        }
+        else
+        {
+            score = 10;
+        }
+        ScoreManager.Instance.AddToScore(score);
+        menu.DisplayScore(score);
         WinPanel.SetActive(true);
+        Destroy(Timer);
     }
 }

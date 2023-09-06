@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 30ab0636bcc00be44ab11644c5c6946e, type: 2}
+  - {fileID: 2100000, guid: b668bde330715b845985f8d7912768c3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -159,7 +159,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 30ab0636bcc00be44ab11644c5c6946e, type: 2}
+  - {fileID: 2100000, guid: b668bde330715b845985f8d7912768c3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -242,7 +242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3374c770dea769447972459598d7d1db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parkingAreaColor: {fileID: 2100000, guid: 30ab0636bcc00be44ab11644c5c6946e, type: 2}
+  parkingAreaColor: {fileID: 2100000, guid: b668bde330715b845985f8d7912768c3, type: 2}
 --- !u!1 &132328910025648872
 GameObject:
   m_ObjectHideFlags: 0
@@ -306,7 +306,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 30ab0636bcc00be44ab11644c5c6946e, type: 2}
+  - {fileID: 2100000, guid: b668bde330715b845985f8d7912768c3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -356,6 +356,9 @@ MonoBehaviour:
   parkArea: {fileID: 0}
   greenColor: {r: 0, g: 1, b: 0, a: 1}
   WinPanel: {fileID: 0}
+  Timer: {fileID: 0}
+  timer: {fileID: 0}
+  menu: {fileID: 0}
 --- !u!1 &132328910113881851
 GameObject:
   m_ObjectHideFlags: 0
@@ -418,7 +421,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 30ab0636bcc00be44ab11644c5c6946e, type: 2}
+  - {fileID: 2100000, guid: b668bde330715b845985f8d7912768c3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -1,21 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Analytics;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
-
+using TMPro;
+using System.Collections;
 
 public class WinMenu : MonoBehaviour
 {
     public GameObject WinPanel;
-
-    //public AudioSource AudioSource;
+    [SerializeField] TextMeshProUGUI scoretext;
 
     private void Awake()
-    { 
+    {
         WaitAndHidePanel();
     }
+
     public void Pause()
     {
         WinPanel.SetActive(true);
@@ -27,6 +24,7 @@ public class WinMenu : MonoBehaviour
         yield return new WaitForSeconds(3);
         Time.timeScale = 0;
     }
+
     public void NextLevel(int level)
     {
         UnlockNewLevel(level);
@@ -51,5 +49,9 @@ public class WinMenu : MonoBehaviour
         }
     }
 
+    public void DisplayScore(int score)
+    {
+        // Get the score from the ScoreManager and display it
+        scoretext.text = "Score: " + score;
+    }
 }
-
