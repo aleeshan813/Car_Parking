@@ -255,7 +255,6 @@ GameObject:
   - component: {fileID: 132328910025648876}
   - component: {fileID: 132328910025648875}
   - component: {fileID: 132328910025648874}
-  - component: {fileID: 132328910025648877}
   m_Layer: 0
   m_Name: Trigger_AB
   m_TagString: Parking_Area_3
@@ -341,24 +340,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.0101608, y: 219.35983, z: 1.3859749}
   m_Center: {x: -0.000000056901808, y: 107.353615, z: 0.17028618}
---- !u!114 &132328910025648877
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 132328910025648872}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff551af0c9a49fb43a261e5482e434de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parkArea: {fileID: 0}
-  greenColor: {r: 0, g: 1, b: 0, a: 1}
-  WinPanel: {fileID: 0}
-  Timer: {fileID: 0}
-  timer: {fileID: 0}
-  menu: {fileID: 0}
 --- !u!1 &132328910113881851
 GameObject:
   m_ObjectHideFlags: 0

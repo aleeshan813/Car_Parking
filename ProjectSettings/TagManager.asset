@@ -9,6 +9,7 @@ TagManager:
   - Parking_Area_4
   - Parking_Area_1
   - Parking_Area_2
+  - Pedistrains
   layers:
   - Default
   - TransparentFX

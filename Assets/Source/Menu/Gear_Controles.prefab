@@ -121,7 +121,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4122685154255120952}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4122685156120011578}
+        m_TargetAssemblyTypeName: GearControles, Assembly-CSharp
+        m_MethodName: ApplyParkingBrake
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4122685154622089264
 GameObject:
   m_ObjectHideFlags: 0
@@ -513,7 +525,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4122685155748668348}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4122685156120011578}
+        m_TargetAssemblyTypeName: GearControles, Assembly-CSharp
+        m_MethodName: StartDriving
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4122685155819963577
 GameObject:
   m_ObjectHideFlags: 0
@@ -667,5 +691,5 @@ MonoBehaviour:
     WheelBL: {fileID: 0}
     WheelBR: {fileID: 0}
   carController: {fileID: 0}
-  driveButton: {fileID: 4122685155748668347}
-  brakeButton: {fileID: 4122685154255120935}
+  TireSource: {fileID: 0}
+  DriveSourc: {fileID: 0}

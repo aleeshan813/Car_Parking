@@ -283,7 +283,7 @@ GameObject:
   - component: {fileID: 8889568844316023681}
   - component: {fileID: 7328371885708595475}
   m_Layer: 0
-  m_Name: Text (TMP)
+  m_Name: Scoretext
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -689,7 +689,7 @@ GameObject:
   - component: {fileID: 3679093792657983519}
   - component: {fileID: 2774453815489187202}
   m_Layer: 0
-  m_Name: Text (TMP) (1)
+  m_Name: Game Win
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -832,7 +832,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5930053537198535972
 RectTransform:
   m_ObjectHideFlags: 0
@@ -964,3 +964,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WinPanel: {fileID: 6303762169965520317}
+  scoretext: {fileID: 7328371885708595475}
